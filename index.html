@@ -5,23 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" type="text/css" href="assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <title>Password Generator</title>
 </head>
 <body>
+
     <div class="container">
         <h1>Password Generator</h1>
         <section>
-            <h2>Generate a Password</h2>
+            <div class="row">
+                <div class="col-12">
+                    <h2>Generate a Password</h2>
+                </div>
+            </div>
             <hr>
             <!-- Password Character Selection -->
-            <input type="checkbox" name="specialChars" value="specialCharsVal"> !@#$%^&* <br>
-            <input type="checkbox" name="numbers" value="numbersVal"> 0-9 <br>
-            <input type="checkbox" name="lwrChars" value="lwrCharsVal" checked> a-z <br> 
-            <input type="checkbox" name="upprChars" value="upprCharsVal" checked> A-Z <br> 
-            <textarea placeholder="Your Secure Password"></textarea>
+            <textarea rows="4"placeholder="Your Secure Password"></textarea>
+            <div class="row">
+                <div class="col-sm-3">
+                    <input type="checkbox" name="specialChars" value="specialCharsVal"> !@#$%
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="numbers" value="numbersVal"> 0-9
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="lwrChars" value="lwrCharsVal" checked> a-z 
+                </div>
+                <div class="col-sm-3">
+                    <input type="checkbox" name="upprChars" value="upprCharsVal" checked> A-Z 
+                </div>
+            </div>
             <hr>
-            <button class="col-6 passGenButn">Generate Password</button>
-            <button class="col-6 clipboardButn">Copy to Cipboard</button>
+            <div class="row">
+                <div class="col-md-6">
+                    <button class="passGenButn">Generate Password</button>
+                </div>
+                <div class="col-md-6">
+                    <button class="clipboardButn">Copy to Clipboard</button>
+                </div>
+            </div>
         </section>
     </div>
     <script src="passwdGen.js"></script>
