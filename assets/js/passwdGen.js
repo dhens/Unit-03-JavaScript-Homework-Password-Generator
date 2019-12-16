@@ -14,8 +14,9 @@ let upprCharsCheckbox = document.getElementsByName("upprChars")[0];
 
 // function to generate a password with the number of characters the user said in the passwordLength prompt
 function createPassword() {
+    password = "";
     let passwordLength = prompt("Length of password? (Must be from 8 to 128 characters");
-    if (passwordLength > minPassLength && passwordLength < maxPassLength) {
+    if (passwordLength >= minPassLength && passwordLength <= maxPassLength) {
         for (i=0; i<passwordLength;i++) {
 
             // Set password equal to the variable password after it randomly egenrates a number to select a random char from the 
