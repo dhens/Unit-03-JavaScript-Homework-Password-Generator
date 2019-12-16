@@ -10,7 +10,7 @@
 </head>
 <body>
 
-    <div class="container">
+    <div class="container"> 
         <h1>Password Generator</h1>
         <section>
             <div class="row">
@@ -20,25 +20,25 @@
             </div>
             <hr>
             <!-- Password Character Selection -->
-            <textarea rows="4"placeholder="Your Secure Password"></textarea>
-            <div class="row">
-                <div class="col-sm-3">
-                    <input type="checkbox" name="specialChars" value="specialCharsVal"> !@#$%
+            <textarea id="passwordBox" rows="4" placeholder="Your Secure Password"></textarea>
+            <div class="row text-center">
+                <div class="col-sm-3 specialChars">
+                    <input type="checkbox" name="specialChars"> !@#$%
                 </div>
                 <div class="col-sm-3">
-                    <input type="checkbox" name="numbers" value="numbersVal"> 0-9
+                    <input type="checkbox" name="numbers"> 0-9
                 </div>
                 <div class="col-sm-3">
-                    <input type="checkbox" name="lwrChars" value="lwrCharsVal" checked> a-z 
+                    <input type="checkbox" name="lwrChars"> a-z 
                 </div>
                 <div class="col-sm-3">
-                    <input type="checkbox" name="upprChars" value="upprCharsVal" checked> A-Z 
+                    <input type="checkbox" name="upprChars"> A-Z 
                 </div>
             </div>
             <hr>
             <div class="row">
                 <div class="col-md-6">
-                    <button class="passGenButn">Generate Password</button>
+                    <button class="passGenButn" onclick="createPassword()">Generate Password</button>
                 </div>
                 <div class="col-md-6">
                     <button class="clipboardButn">Copy to Clipboard</button>
