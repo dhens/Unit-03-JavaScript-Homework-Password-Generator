@@ -10,27 +10,34 @@ let upprCharsCheckbox = document.getElementsByName("upprChars")[0];
 // function to generate a password with the number of characters the user said in the passwordLength prompt
 function createPassword() {
 
+    // define our character sets used for password generation
     const lowercaseLetters = "abcdefghijklmnopqrstuvwxyz";
     const uppercaseletters = lowercaseLetters.toUpperCase();
     const numbersList = "0123456789";
     const specialCharacters = "!@#$%^&*()_+{}|:?><[]";
 
+    // define our checkbox states and where they are in the DOM
     lettersLow = document.getElementsByName("lwrChars")[0].checked;
     lettersHigh =  document.getElementsByName("upprChars")[0].checked;
     numbers = document.getElementsByName("numbers")[0].checked;
     specials = document.getElementsByName("specialChars")[0].checked;
 
+    // Ask user how long they want their password to be
     let passwordLength = prompt("Length of password? (Must be from 8 to 128 characters)");
 
+    // if the user's password length submitted is more than 8 and less than 128, generate a password and place it in the textarea on the page
     if (passwordLength >= minPassLength && passwordLength <= maxPassLength) {
 
-        // Keeps password from having each generation add on to the last
+        // Clears password var if there has been a previous passgen so we don't get stacking previously gen'd passwords
         password = "";
+        
         // Log if the box is checked for the respective char type
         console.log(specials, numbers, lettersLow, lettersHigh)
 
+        // add a character as long as the # of iterations is less than the user specified passwordLength
         for (i=0; i<passwordLength;i++) {
             console.log(password)
+            // if our lowercase checkbox has been checked and the current length of our gen'd passwd is less than the user's passwordLength, add a random char from lowercaseLetters string
             if (lettersLow && password.length < passwordLength) {
                 password = password+=lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
             }
@@ -55,8 +62,3 @@ function createPassword() {
         alert("Password MUST BE BETWEEN 8 AND 128 characters!")
     }
 }
-
-    function populateForm(enterLength) {
-        passwordForm = createPassword(enterLength);
-        
-    }
