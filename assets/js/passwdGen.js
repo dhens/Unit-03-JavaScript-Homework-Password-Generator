@@ -68,3 +68,12 @@ function createPassword() {
         alert("Password MUST BE BETWEEN 8 AND 128 characters!")
     }
 }
+
+function copyToClipboard() {
+    let copyPass = document.getElementById("passwordBox");
+    copyPass.focus();
+    copyPass.select();
+    document.execCommand("copy");
+    alert("Password copied!");
+  }
+  

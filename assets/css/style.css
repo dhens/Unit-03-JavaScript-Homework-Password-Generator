@@ -70,6 +70,7 @@ section{
 }
 
 textarea{
+    text-align: center;
     width: 100%;
     border-radius: 10px;
     border: dashed 1px gray;
