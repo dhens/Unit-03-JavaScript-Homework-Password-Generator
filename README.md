@@ -3,6 +3,9 @@ This is an application that generates a random password based on user-selected c
 
 Production page: https://dhens.github.io/Unit-03-JavaScript-Homework-Password-Generator/
 
+![passwd logo](assets/images/logo.png)
+
+
 ## This repo contains:
 * This README
 * A javascript-powered password generator page that uses user-selected criteria for what the passwords characters are
