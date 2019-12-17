@@ -3,7 +3,7 @@ This is an application that generates a random password based on user-selected c
 
 Production page: https://dhens.github.io/Unit-03-JavaScript-Homework-Password-Generator/
 
-![passwordPage](https://imgur.com/a/e0Twauu)
+![passwordPage](https://i.imgur.com/N7DEemY.png)
 
 ## This repo contains:
 * This README
