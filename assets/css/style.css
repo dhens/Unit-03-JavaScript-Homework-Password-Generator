@@ -3,9 +3,17 @@
   }
 
 h1,
-h2{
+h3{
     color: #2c3e50;
     text-align: center;
+}
+
+h1{
+    margin-bottom: 40px !important;
+}
+
+h3{
+    text-align: left;
 }
 
 body, html {
@@ -44,20 +52,25 @@ section{
 .passGenButn{
     background-color: #d63031;
     border: none;
-    width: 50%;
-    border-radius: 12px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 20px;
     color: white;
+    font-size: larger;
 }
 
 .clipboardButn{
-    color: white;
     background-color: gray;
     border: none;
-    width: 50%;
-    border-radius: 12px;
+    padding: 8px;
+    width: 100%;
+    border-radius: 20px;
+    color: white;
+    font-size: larger;
 }
 
 textarea{
+    text-align: center;
     width: 100%;
     border-radius: 10px;
     border: dashed 1px gray;
@@ -65,4 +78,13 @@ textarea{
 
 ::placeholder{
     text-align: center;
+}
+
+/* Make buttons larger for smaller screens */
+@media (max-width: 768px) {
+    .passGenButn,
+    .clipboardButn{
+        margin: 10px;
+        padding: 20px;
+    }
 }
