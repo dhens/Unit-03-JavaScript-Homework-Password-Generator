@@ -25,18 +25,24 @@ function createPassword() {
     // Ask user how long they want their password to be
     let passwordLength = prompt("Length of password? (Must be from 8 to 128 characters)");
 
+    // if no checkboxes are selected, then prompt the user again to fill out the form and reload the page
+    if (lettersLow == false && lettersHigh == false && numbers == false && specials == false){
+        alert("You must select at least one character type!")
+
+        // reload page to get back to the point where the event hasn't been triggered as there's no waiting while loop for checkbox input. hacky but it works
+        window.location.reload();
+    }
     // if the user's password length submitted is more than 8 and less than 128, generate a password and place it in the textarea on the page
     if (passwordLength >= minPassLength && passwordLength <= maxPassLength) {
 
         // Clears password var if there has been a previous passgen so we don't get stacking previously gen'd passwords
         password = "";
-        
+
         // Log if the box is checked for the respective char type
         console.log(specials, numbers, lettersLow, lettersHigh)
 
         // add a character as long as the # of iterations is less than the user specified passwordLength
         for (i=0; i<passwordLength;i++) {
-            console.log(password)
             // if our lowercase checkbox has been checked and the current length of our gen'd passwd is less than the user's passwordLength, add a random char from lowercaseLetters string
             if (lettersLow && password.length < passwordLength) {
                 password = password+=lowercaseLetters.charAt(Math.floor(Math.random() * lowercaseLetters.length));
