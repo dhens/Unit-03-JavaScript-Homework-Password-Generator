@@ -62,13 +62,14 @@ function createPassword() {
     }
 
     // Add generated password to html form
-    passwordForm.innerHTML = password;
+    passwordForm.value = password;
 }
     else{
         alert("Password MUST BE BETWEEN 8 AND 128 characters!")
     }
 }
 
+// copy the generated password to users clipboard
 function copyToClipboard() {
     let copyPass = document.getElementById("passwordBox");
     copyPass.focus();
